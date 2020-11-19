@@ -20,7 +20,17 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [Controllers\HomeController::class, 'index'])->name('home');
+Route::group(['middleware' => ['web']],function () {
+    Route::get('/home', [Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('users/create', [Controllers\UserController::class, 'create'])->name('users-create');
-Route::post('users', [Controllers\UserController::class, 'store'])->name('users-store');
+    Route::get('/user/create', [Controllers\UserController::class, 'create'])->name('createUser');
+    Route::post('/user/store', [Controllers\UserController::class, 'store']);
+
+    Route::get('/product/create', [Controllers\ProductController::class, 'create'])->name('createProduct');
+    Route::post('/product/store', [Controllers\ProductController::class, 'store']);
+
+    Route::get('/profile', [Controllers\ProfileController::class, 'show'])->name('profile');
+    Route::post('/profile/edit/{user}', [Controllers\ProfileController::class, 'edit']);
+    Route::patch('/profile/update/{user}', [Controllers\ProfileController::class, 'update'])->name('profile.update');
+});
+

@@ -30,3 +30,20 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 const app = new Vue({
     el: '#app',
 });
+
+$(document).ready(function () {
+    $("#txtPhoneNo").keyup(function (e) {
+        if($(this).val().length === 14) return;
+        if(e.keyCode === 8 || e.keyCode === 37 || e.keyCode === 39) return;
+        let newStr = '';
+        let groups = $(this).val().split('-');
+        for(let i in groups) {
+            if (groups[i].length % 4 === 0) {
+                newStr += groups[i] + "-"
+            } else {
+                newStr += groups[i];
+            }
+        }
+        $(this).val(newStr);
+    });
+})

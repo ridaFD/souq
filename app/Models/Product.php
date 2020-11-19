@@ -8,4 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name',
+        'category_id',
+        'user_id',
+        'description',
+        'price',
+        'image',
+    ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

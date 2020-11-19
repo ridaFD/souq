@@ -1,4 +1,6 @@
 <x-master>
     <x-navbar />
-    {{ $slot }}
+    <div class="container mx-auto flex justify-center">
+        {{ $slot }}
+    </div>
 </x-master>

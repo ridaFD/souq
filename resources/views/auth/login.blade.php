@@ -13,11 +13,11 @@
                             <div class="mb-4">
                                 <label for="email" class="text-md-left">Email</label>
 
-                                <div class="mt-2">
+                                <div class="mt-2 flex flex-col">
                                     <input id="email" type="email" class="focus:outline-none border-b border-blue-500 font-light @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                     @error('email')
-                                        <span class="invalid-feedback" role="alert">
+                                        <span class="text-red-500" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
@@ -27,11 +27,11 @@
                             <div class="mb-4">
                                 <label for="password" class="text-md-left">{{ __('Password') }}</label>
 
-                                <div class="mt-2">
+                                <div class="mt-2 flex flex-col">
                                     <input id="password" type="password" class="focus:outline-none border-b border-blue-500 font-light  @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                                     @error('password')
-                                        <span class="invalid-feedback" role="alert">
+                                        <span class="text-red-500" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
@@ -55,6 +55,8 @@
                                     <button type="submit" class="border border-blue-500 p-2 bg-blue-500 text-white">
                                         {{ __('Login') }}
                                     </button>
+
+                                    <a href="/" class="mx-2">Cancel</a>
 
                                     @if (Route::has('password.request'))
                                         <a class="font-light" href="{{ route('password.request') }}">

@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('address')->nullable();
             $table->string('tel')->nullable();
             $table->string('avatar')->nullable();
-            $table->foreignId('role_id')->references('id')->on('roles')->onDelete('cascade');
+            $table->string('role')->default('customer');
             $table->rememberToken();
             $table->timestamps();
         });

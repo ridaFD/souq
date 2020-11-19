@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -14,15 +15,15 @@ class UserController extends Controller
         return view('user.create');
     }
 
-    public function store()
+    public function store(User $user)
     {
         request()->validate([
-            'name' => ['string', 'required', 'max:255'],
-            'email' => ['string', 'required', 'max:255', 'email', 'unique:users'],
-            'password' => ['string', 'required', 'min:8', 'confirmed'],
-            'tel' => ['string', 'required', 'min:9', 'max:9'],
-            'address' => ['string', 'required', 'max:255'],
-            'role' => ['string', 'required', 'max:255']
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', Rule::unique('users')->ignore($user)],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'tel' => ['string', 'min:8', 'nullable'],
+            'address' => ['string', 'max:255', 'nullable'],
+            'role' => ['string', 'max:255', 'nullable']
         ]);
 
         User::create([
@@ -34,6 +35,6 @@ class UserController extends Controller
             'role' => request('role')
         ]);
 
-        return redirect('/home');
+        return redirect(route('home'));
     }
 }
