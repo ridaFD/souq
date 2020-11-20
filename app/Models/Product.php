@@ -18,6 +18,11 @@ class Product extends Model
         'image',
     ];
 
+    public function getImageAttribute($value)
+    {
+        return asset($value);
+    }
+
     public function user()
     {
         return $this->belongsTo(User::class);

@@ -7,8 +7,8 @@
         <ul class="flex justify-between w-full mx-12">
             <a href="{{ route('home') }}"><li class="bg-blue-500 p-2 rounded text-white">Home</li></a>
             <a href="{{ route('profile') }}"><li class="bg-blue-500 p-2 rounded text-white">Profile</li></a>
-            <a href="{{ route('createProduct') }}"><li class="bg-blue-500 p-2 rounded text-white">Create Product</li></a>
-            <a href="{{ route('createUser') }}"><li class="bg-blue-500 p-2 rounded text-white">Create User</li></a>
+            <a href="{{ route('product.create') }}"><li class="bg-blue-500 p-2 rounded text-white">Create Product</li></a>
+            <a href="{{ route('user.create') }}"><li class="bg-blue-500 p-2 rounded text-white">Create User</li></a>
             <a href=""><li class="bg-blue-500 p-2 rounded text-white">Cart</li></a>
         </ul>
 

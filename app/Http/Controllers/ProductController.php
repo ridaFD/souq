@@ -22,19 +22,40 @@ class ProductController extends Controller
             'price' => ['required', 'numeric'],
             'image' => ['required', 'file', 'mimes:jpeg,jpg,svg|max:2048'],
         ]);
-//        dimensions:min_width=100,min_height=200
-//        file|size:512
-//        dd($_POST);
+
         Product::create([
            'name' => request('name'),
            'category_id' => request('category_id'),
            'user_id' => auth()->id(),
            'description' => request('description'),
            'price' => request('price'),
-           'image' => $_FILES['image']['name'],
+           'image' => request('image')->store('products.images'),
         ]);
 
-        request('image')->store('images');
+        return redirect(route('home'));
+    }
+
+    public function edit(Product $id)
+    {
+        return view('product.edit', [
+            'categories' => Category::all(),
+            'product' => $id
+        ]);
+    }
+
+    public function update(Product $product)
+    {
+        $attributes = request()->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'description' => ['required', 'string'],
+            'price' => ['required', 'numeric'],
+            'image' => ['required', 'file', 'mimes:jpeg,jpg,svg|max:2048'],
+        ]);
+
+        if (request('image')) {
+            $attributes['image'] = request('image')->store('images');
+        }
+        $product->update($attributes);
 
         return redirect(route('home'));
     }

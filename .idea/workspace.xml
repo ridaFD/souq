@@ -23,9 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bda6d4d6-b2f0-41d4-8a4f-73fdb9e65e94" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/product/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/profile/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/profile/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/_products.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/product/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mini-store/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mini-store/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mini-store/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mini-store/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mini-store/controllers/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/../mini-store/controllers/home.php" afterDir="false" />
@@ -49,24 +48,13 @@
       <change beforePath="$PROJECT_DIR$/../mini-store/views/profile.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/../mini-store/views/profile.view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mini-store/views/single-product.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/../mini-store/views/single-product.view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mini-store/views/user-edit.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/../mini-store/views/user-edit.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Role.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_14_184714_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_14_184714_create_products_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_14_232502_create_roles_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/components/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/navbar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -212,6 +200,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/storage/products_images" />
       <recent name="$PROJECT_DIR$/resources/views/user" />
       <recent name="$PROJECT_DIR$/resources/views/register.blade.php" />
       <recent name="$PROJECT_DIR$/resources/views/components" />
@@ -240,6 +229,8 @@
       <workItem from="1605679736569" duration="4550000" />
       <workItem from="1605688713583" duration="15822000" />
       <workItem from="1605770608336" duration="22282000" />
+      <workItem from="1605854263731" duration="10753000" />
+      <workItem from="1605874931082" duration="5974000" />
     </task>
     <servers />
   </component>
@@ -311,9 +302,9 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="347" y="174" key="run.anything.popup/0.27.1366.741@0.27.1366.741" timestamp="1605696133634" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1605828628605">
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1605880198583">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1605828628605" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1605880198583" />
   </component>
 </project>

@@ -23,14 +23,16 @@ Auth::routes();
 Route::group(['middleware' => ['web']],function () {
     Route::get('/home', [Controllers\HomeController::class, 'index'])->name('home');
 
-    Route::get('/user/create', [Controllers\UserController::class, 'create'])->name('createUser');
+    Route::get('/user/create', [Controllers\UserController::class, 'create'])->name('user.create');
     Route::post('/user/store', [Controllers\UserController::class, 'store']);
 
-    Route::get('/product/create', [Controllers\ProductController::class, 'create'])->name('createProduct');
+    Route::get('/product/create', [Controllers\ProductController::class, 'create'])->name('product.create');
     Route::post('/product/store', [Controllers\ProductController::class, 'store']);
+    Route::post('/product/edit/{id}', [Controllers\ProductController::class, 'edit'])->name('product.edit');
+    Route::patch('/product/update/{product}', [Controllers\ProductController::class, 'update']);
 
     Route::get('/profile', [Controllers\ProfileController::class, 'show'])->name('profile');
     Route::post('/profile/edit/{user}', [Controllers\ProfileController::class, 'edit']);
-    Route::patch('/profile/update/{user}', [Controllers\ProfileController::class, 'update'])->name('profile.update');
+    Route::patch('/profile/update/{user}', [Controllers\ProfileController::class, 'update']);
 });
 
