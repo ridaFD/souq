@@ -1,8 +1,8 @@
 <x-app>
     <div class="">
-        <form action="/product/update/{{ $product->id }}" method="POST" enctype="multipart/form-data">
-            @csrf
+        <form action="{{ route('product.update', $product->id) }}" method="POST" enctype="multipart/form-data">
             @method('PATCH')
+            @csrf
 
             <h1 class="text-2xl text-center py-4 mb-4 border-b border-gray-500">Edit Product</h1>
 

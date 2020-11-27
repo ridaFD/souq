@@ -1,6 +1,6 @@
 <x-app>
     <div class="w-full">
-        <form action="/user/store" method="POST">
+        <form action="{{ route('user.store') }}" method="POST">
             @csrf
 
             <h1 class="text-2xl text-center py-4 mb-4 border-b border-gray-500">Create New User</h1>
@@ -12,7 +12,7 @@
                                class="border border-gray-500 p-1 focus:outline-none font-light @error('name') is-invalid @enderror">
 
                         @error('name')
-                        <span class="invalid-feedback" role="alert">
+                        <span class="text-red-500" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
                         @enderror
@@ -24,7 +24,7 @@
                                class="border border-gray-500 p-1 focus:outline-none font-light">
 
                         @error('email')
-                        <span class="invalid-feedback" role="alert">
+                        <span class="text-red-500" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
                         @enderror
@@ -61,10 +61,15 @@
                         <label for="role" class="text-md-left mb-1">Role</label>
                         <select name="role" id="role"
                                 class="border border-gray-500 p-1 focus:outline-none font-light"style="padding-bottom: 8px" >
-                            <option value="owner">Owner</option>
+                            <option value="owner" selected>Owner</option>
                             <option value="admin">Admin</option>
-                            <option value="customer">Customer</option>
                         </select>
+
+                        @error('role')
+                        <span class="text-red-500" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
                     </div>
 
                     <div class="flex flex-col mb-2">
@@ -73,7 +78,7 @@
                                class="border border-gray-500 p-1 focus:outline-none font-light">
 
                         @error('address')
-                        <span class="invalid-feedback" role="alert">
+                        <span class="text-red-500" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
                         @enderror
@@ -86,7 +91,7 @@
                                class="border border-gray-500 p-1 focus:outline-none font-light">
 
                         @error('tel')
-                        <span class="invalid-feedback" role="alert">
+                        <span class="text-red-500" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
                         @enderror

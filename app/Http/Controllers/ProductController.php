@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class ProductController extends Controller
 {
@@ -35,11 +36,11 @@ class ProductController extends Controller
         return redirect(route('home'));
     }
 
-    public function edit(Product $id)
+    public function edit(Product $product)
     {
         return view('product.edit', [
             'categories' => Category::all(),
-            'product' => $id
+            'product' => $product
         ]);
     }
 
@@ -51,11 +52,24 @@ class ProductController extends Controller
             'price' => ['required', 'numeric'],
             'image' => ['required', 'file', 'mimes:jpeg,jpg,svg|max:2048'],
         ]);
-
         if (request('image')) {
             $attributes['image'] = request('image')->store('images');
         }
+
         $product->update($attributes);
+
+        return redirect(route('home'));
+    }
+
+    public function show(Product $product)
+    {
+        return view('product.show', ['product' => $product]);
+    }
+
+    public function destroy(Product $product)
+    {
+//        dd($product);
+        $product->delete($product);
 
         return redirect(route('home'));
     }

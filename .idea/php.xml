@@ -108,6 +108,10 @@
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/vendor/voku/stop-words" />
+      <path value="$PROJECT_DIR$/vendor/alexpechkarev/geometry-library" />
+      <path value="$PROJECT_DIR$/vendor/alexpechkarev/google-maps" />
+      <path value="$PROJECT_DIR$/vendor/jbroadway/urlify" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.3" />

@@ -10,7 +10,7 @@ class ProfileController extends Controller
 {
     public function show()
     {
-        return view('profile.show', ['user' => User::where('id', auth()->user()->id)->get()]);
+        return view('profile.show', ['user' => User::where('id', auth()->id())->get()]);
     }
 
     public function edit(User $user)
@@ -25,12 +25,13 @@ class ProfileController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', \Illuminate\Validation\Rule::unique('users')->ignore($user)],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'tel' => ['string', 'min:8', 'nullable'],
-            'address' => ['string', 'max:255', 'nullable']
+            'address' => ['string', 'max:255', 'nullable'],
+            'role' => ['string', 'max:255', 'required'],
         ]);
 
         $user->update($attributes);
 
 
-        return redirect(route('home'));
+        return redirect(route('profile'));
     }
 }

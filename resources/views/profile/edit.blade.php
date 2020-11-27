@@ -1,5 +1,5 @@
 <x-app>
-    <form method="POST" action="/profile/update/{{ auth()->id() }}" class="w-2/3 mt-6">
+    <form method="POST" action="{{ route('profile.update', auth()->id()) }}" class="w-2/3 mt-6">
         @csrf
         @method('PATCH')
 
@@ -103,6 +103,26 @@
 
         <div class="mb-4">
             <label class="block mb-2 uppercase font-bold text-xs text-gray-700"
+                   for="address"
+            >
+                Address
+            </label>
+
+            <input class="border border-gray-400 p-2 w-full"
+                   type="text"
+                   name="address"
+                   id="address"
+                   value="{{ $user->address }}"
+                   required
+            >
+
+            @error('address')
+            <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
+            @enderror
+        </div>
+
+        <div class="mb-4">
+            <label class="block mb-2 uppercase font-bold text-xs text-gray-700"
                    for="tel"
             >
                 Tel
@@ -130,7 +150,7 @@
                 Submit
             </button>
 
-            <a href="" class="hover:underline">Cancel</a>
+            <a href="{{ route('profile') }}" class="hover:underline">Cancel</a>
         </div>
     </form>
 </x-app>

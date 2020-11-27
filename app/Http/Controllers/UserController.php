@@ -23,7 +23,7 @@ class UserController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'tel' => ['string', 'min:8', 'nullable'],
             'address' => ['string', 'max:255', 'nullable'],
-            'role' => ['string', 'max:255', 'nullable']
+            'role' => ['string', 'max:255', 'required']
         ]);
 
         User::create([

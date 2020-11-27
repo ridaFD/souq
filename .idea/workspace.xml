@@ -23,8 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bda6d4d6-b2f0-41d4-8a4f-73fdb9e65e94" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/_products.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/product/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/cart/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/delete_button.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/product/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mini-store/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mini-store/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mini-store/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mini-store/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mini-store/controllers/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/../mini-store/controllers/home.php" afterDir="false" />
@@ -48,13 +49,23 @@
       <change beforePath="$PROJECT_DIR$/../mini-store/views/profile.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/../mini-store/views/profile.view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mini-store/views/single-product.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/../mini-store/views/single-product.view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mini-store/views/user-edit.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/../mini-store/views/user-edit.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/mini_store_laravel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mini_store_laravel.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProfileController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/_products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/_products.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/components/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/navbar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/product/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/product/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/product/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/product/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profile/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -177,6 +188,10 @@
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/vendor/voku/stop-words" />
+      <path value="$PROJECT_DIR$/vendor/alexpechkarev/geometry-library" />
+      <path value="$PROJECT_DIR$/vendor/alexpechkarev/google-maps" />
+      <path value="$PROJECT_DIR$/vendor/jbroadway/urlify" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kHBu837QeE5VsUETEQH77Hpmwj" />
@@ -231,6 +246,17 @@
       <workItem from="1605770608336" duration="22282000" />
       <workItem from="1605854263731" duration="10753000" />
       <workItem from="1605874931082" duration="5974000" />
+      <workItem from="1605977884729" duration="14330000" />
+      <workItem from="1606023588883" duration="14151000" />
+      <workItem from="1606075069182" duration="2760000" />
+      <workItem from="1606124210561" duration="23085000" />
+      <workItem from="1606201518922" duration="3683000" />
+      <workItem from="1606293055519" duration="1755000" />
+      <workItem from="1606295078995" duration="14213000" />
+      <workItem from="1606332295488" duration="1535000" />
+      <workItem from="1606369124783" duration="3455000" />
+      <workItem from="1606392396620" duration="24751000" />
+      <workItem from="1606460576611" duration="13075000" />
     </task>
     <servers />
   </component>
@@ -282,10 +308,10 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="172" y="31" width="1022" height="737" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1605679919748" />
-    <state x="412" y="128" width="639" height="524" key="StructurePopup" timestamp="1605814104034">
+    <state x="412" y="128" width="639" height="524" key="StructurePopup" timestamp="1606023873661">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="412" y="128" width="639" height="524" key="StructurePopup/0.27.1366.741@0.27.1366.741" timestamp="1605814104034" />
+    <state x="412" y="128" width="639" height="524" key="StructurePopup/0.27.1366.741@0.27.1366.741" timestamp="1606023873661" />
     <state width="569" height="446" key="SwitcherDM" timestamp="1605650884690">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -298,13 +324,17 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="377" y="58" width="602" height="686" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.1366.741@0.27.1366.741" timestamp="1605353903507" />
+    <state x="464" y="312" width="438" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606173521456">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="464" y="312" width="438" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1366.741@0.27.1366.741" timestamp="1606173521456" />
     <state x="347" y="174" key="run.anything.popup" timestamp="1605696133634">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="347" y="174" key="run.anything.popup/0.27.1366.741@0.27.1366.741" timestamp="1605696133634" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1605880198583">
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1606482502708">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1605880198583" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1606482502708" />
   </component>
 </project>

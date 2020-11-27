@@ -1,7 +1,7 @@
 <x-master>
     <div class="flex justify-center mt-2">
         <div class="container w-1/3">
-            <form action="{{ route('register') }}" method="POST">
+                <form action="{{ route('register') }}" method="POST">
                 @csrf
 
                 <h1 class="text-2xl text-center">Create New User</h1>

@@ -18,21 +18,29 @@ Route::get('/', function () {
 });
 
 
+
 Auth::routes();
 
-Route::group(['middleware' => ['web']],function () {
+Route::middleware('auth')->group(function () {
     Route::get('/home', [Controllers\HomeController::class, 'index'])->name('home');
 
     Route::get('/user/create', [Controllers\UserController::class, 'create'])->name('user.create');
-    Route::post('/user/store', [Controllers\UserController::class, 'store']);
+    Route::post('/user', [Controllers\UserController::class, 'store'])->name('user.store');
+
+    Route::get('/cart', [Controllers\CartController::class, 'index'])->name('cart');
+    Route::post('/cart/{product}', [Controllers\CartController::class, 'addToCart'])->name('add.to.cart');
+    Route::delete('/cart/{product}', [Controllers\CartController::class, 'destroy'])->name('cart.destroy');
 
     Route::get('/product/create', [Controllers\ProductController::class, 'create'])->name('product.create');
-    Route::post('/product/store', [Controllers\ProductController::class, 'store']);
-    Route::post('/product/edit/{id}', [Controllers\ProductController::class, 'edit'])->name('product.edit');
-    Route::patch('/product/update/{product}', [Controllers\ProductController::class, 'update']);
+    Route::post('/product', [Controllers\ProductController::class, 'store'])->name('product.store');
+    Route::get('/product/{product}', [Controllers\ProductController::class, 'show'])->name('product.show');
+    Route::post('/product/{product}/edit', [Controllers\ProductController::class, 'edit'])->name('product.edit');
+    Route::patch('/product/{product}', [Controllers\ProductController::class, 'update'])->name('product.update');
+    Route::delete('/product/{product}', [Controllers\ProductController::class, 'destroy'])->name('product.destroy');
+
 
     Route::get('/profile', [Controllers\ProfileController::class, 'show'])->name('profile');
-    Route::post('/profile/edit/{user}', [Controllers\ProfileController::class, 'edit']);
-    Route::patch('/profile/update/{user}', [Controllers\ProfileController::class, 'update']);
+    Route::post('/profile/{user:id}/edit', [Controllers\ProfileController::class, 'edit']);
+    Route::patch('/profile/{user}', [Controllers\ProfileController::class, 'update'])->name('profile.update');
 });
 
