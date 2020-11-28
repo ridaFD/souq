@@ -6,10 +6,16 @@
 
         <ul class="flex justify-between w-full mx-12">
             <a href="{{ route('home') }}"><li class="bg-blue-500 p-2 rounded text-white">Home</li></a>
-            <a href="{{ route('profile') }}"><li class="bg-blue-500 p-2 rounded text-white">Profile</li></a>
-            <a href="{{ route('product.create') }}"><li class="bg-blue-500 p-2 rounded text-white">Create Product</li></a>
-            <a href="{{ route('user.create') }}"><li class="bg-blue-500 p-2 rounded text-white">Create User</li></a>
-            <a href="{{ route('cart') }}"><li class="bg-blue-500 p-2 rounded text-white">Cart</li></a>
+            @can('owner')
+                <a href="{{ route('profile') }}"><li class="bg-blue-500 p-2 rounded text-white">Profile</li></a>
+                <a href="{{ route('product.create') }}"><li class="bg-blue-500 p-2 rounded text-white">Create Product</li></a>
+            @endcan
+            @can('admin')
+                <a href="{{ route('user.create') }}"><li class="bg-blue-500 p-2 rounded text-white">Create User</li></a>
+            @endcan
+            @can('customer')
+                <a href="{{ route('cart') }}"><li class="bg-blue-500 p-2 rounded text-white">Cart</li></a>
+            @endcan
         </ul>
 
         <div class="collapse " id="navbarSupportedContent">

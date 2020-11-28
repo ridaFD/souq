@@ -24,22 +24,22 @@ Auth::routes();
 Route::middleware('auth')->group(function () {
     Route::get('/home', [Controllers\HomeController::class, 'index'])->name('home');
 
-    Route::get('/user/create', [Controllers\UserController::class, 'create'])->name('user.create');
+    Route::get('/user/create', [Controllers\UserController::class, 'create'])->name('user.create')->middleware('can:admin');
     Route::post('/user', [Controllers\UserController::class, 'store'])->name('user.store');
 
-    Route::get('/cart', [Controllers\CartController::class, 'index'])->name('cart');
+    Route::get('/cart', [Controllers\CartController::class, 'index'])->name('cart')->middleware('can:customer');
     Route::post('/cart/{product}', [Controllers\CartController::class, 'addToCart'])->name('add.to.cart');
     Route::delete('/cart/{product}', [Controllers\CartController::class, 'destroy'])->name('cart.destroy');
 
-    Route::get('/product/create', [Controllers\ProductController::class, 'create'])->name('product.create');
+    Route::get('/product/create', [Controllers\ProductController::class, 'create'])->name('product.create')->middleware('can:owner');
     Route::post('/product', [Controllers\ProductController::class, 'store'])->name('product.store');
-    Route::get('/product/{product}', [Controllers\ProductController::class, 'show'])->name('product.show');
+    Route::get('/product/{product}', [Controllers\ProductController::class, 'show'])->name('product.show')->middleware('can:customer');
     Route::post('/product/{product}/edit', [Controllers\ProductController::class, 'edit'])->name('product.edit');
     Route::patch('/product/{product}', [Controllers\ProductController::class, 'update'])->name('product.update');
     Route::delete('/product/{product}', [Controllers\ProductController::class, 'destroy'])->name('product.destroy');
 
 
-    Route::get('/profile', [Controllers\ProfileController::class, 'show'])->name('profile');
+    Route::get('/profile', [Controllers\ProfileController::class, 'show'])->name('profile')->middleware('can:owner');
     Route::post('/profile/{user:id}/edit', [Controllers\ProfileController::class, 'edit']);
     Route::patch('/profile/{user}', [Controllers\ProfileController::class, 'update'])->name('profile.update');
 });

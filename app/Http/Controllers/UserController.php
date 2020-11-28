@@ -10,7 +10,7 @@ use Illuminate\Validation\Rule;
 
 class UserController extends Controller
 {
-    public function create()
+    public function create(User $user)
     {
         return view('user.create');
     }
