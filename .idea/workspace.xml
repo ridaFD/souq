@@ -23,7 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bda6d4d6-b2f0-41d4-8a4f-73fdb9e65e94" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/helpers.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/emails/myTestMail.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mini-store/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mini-store/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mini-store/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mini-store/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mini-store/controllers/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/../mini-store/controllers/home.php" afterDir="false" />
@@ -47,14 +47,8 @@
       <change beforePath="$PROJECT_DIR$/../mini-store/views/profile.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/../mini-store/views/profile.view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mini-store/views/single-product.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/../mini-store/views/single-product.view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mini-store/views/user-edit.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/../mini-store/views/user-edit.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/mini_store_laravel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mini_store_laravel.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/navbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -253,7 +247,8 @@
       <workItem from="1606369124783" duration="3455000" />
       <workItem from="1606392396620" duration="24751000" />
       <workItem from="1606460576611" duration="13765000" />
-      <workItem from="1606552632945" duration="17480000" />
+      <workItem from="1606552632945" duration="18130000" />
+      <workItem from="1606681279676" duration="6290000" />
     </task>
     <servers />
   </component>
@@ -337,9 +332,9 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="347" y="174" key="run.anything.popup/0.27.1366.741@0.27.1366.741" timestamp="1605696133634" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1606601831101">
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1606688899664">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1606601831101" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1606688899664" />
   </component>
 </project>

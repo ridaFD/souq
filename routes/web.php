@@ -17,7 +17,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::post('/user/send-mail', function () {
 
+    $details = [
+        'title' => 'Souq email activation',
+        'body' => 'Hello Mr. Rida your account at Souq has been activated'
+    ];
+
+    Mail::to('ridafd7@gmail.com')->send(new \App\Mail\MyTestMail($details));
+
+    dd("Email is Sent.");
+});
 
 Auth::routes();
 

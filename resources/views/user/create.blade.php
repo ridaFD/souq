@@ -110,5 +110,12 @@
                 </div>
             </div>
         </form>
+        <form action="/user/send-mail" method="post">
+            @csrf
+
+            <div class="flex">
+                <button type="submit" class="p-1 bg-yellow-500 hover:bg-yellow-600 text-white mr-2">send email</button>
+            </div>
+        </form>
     </div>
 </x-app>
