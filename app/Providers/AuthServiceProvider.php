@@ -28,6 +28,9 @@ class AuthServiceProvider extends ServiceProvider
         $this->registerPolicies();
 
         Gate::before(function ($user, $ability) {
+            if (session()->exists('cart') != true) {
+                session()->put('cart', []);
+            }
             return $user->hasRole()->contains($ability);
         });
     }

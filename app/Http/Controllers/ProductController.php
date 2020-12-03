@@ -9,6 +9,13 @@ use Illuminate\Support\Facades\Validator;
 
 class ProductController extends Controller
 {
+    public function index()
+    {
+        $products = Product::all();
+
+        return view('home', ['products' => $products]);
+    }
+
     public function create()
     {
         return view('product.create', ['categories' => Category::all()]);
@@ -68,7 +75,6 @@ class ProductController extends Controller
 
     public function destroy(Product $product)
     {
-//        dd($product);
         $product->delete($product);
 
         return redirect(route('home'));

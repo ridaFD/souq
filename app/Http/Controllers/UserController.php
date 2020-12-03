@@ -6,6 +6,7 @@ use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Validation\Rule;
 
 class UserController extends Controller
@@ -34,6 +35,13 @@ class UserController extends Controller
             'address' => request('address'),
             'role' => request('role')
         ]);
+
+        $details = [
+            'title' => 'Souq email activation',
+            'body' => 'Hello Mr. Rida your account at Souq has been activated'
+        ];
+
+        Mail::to('ridafd7@gmail.com')->send(new \App\Mail\MyTestMail($details));
 
         return redirect(route('home'));
     }

@@ -23,7 +23,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bda6d4d6-b2f0-41d4-8a4f-73fdb9e65e94" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/emails/myTestMail.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mini-store/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mini-store/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mini-store/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mini-store/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mini-store/controllers/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/../mini-store/controllers/home.php" afterDir="false" />
@@ -48,7 +47,18 @@
       <change beforePath="$PROJECT_DIR$/../mini-store/views/single-product.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/../mini-store/views/single-product.view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mini-store/views/user-edit.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/../mini-store/views/user-edit.view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_14_184714_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_14_184714_create_products_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/_products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/_products.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cart/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cart/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/emails/myTestMail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/emails/myTestMail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/product/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/product/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/user/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -249,6 +259,11 @@
       <workItem from="1606460576611" duration="13765000" />
       <workItem from="1606552632945" duration="18130000" />
       <workItem from="1606681279676" duration="6290000" />
+      <workItem from="1606720530902" duration="600000" />
+      <workItem from="1606801985150" duration="1172000" />
+      <workItem from="1606814428592" duration="31873000" />
+      <workItem from="1606890253031" duration="14139000" />
+      <workItem from="1606984357475" duration="991000" />
     </task>
     <servers />
   </component>
@@ -272,10 +287,10 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="474" y="157" width="398" height="496" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.27.1366.741@0.27.1366.741" timestamp="1605427168472" />
-    <state x="416" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605825520774">
+    <state x="416" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606834158753">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="416" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1366.741@0.27.1366.741" timestamp="1605825520774" />
+    <state x="416" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1366.741@0.27.1366.741" timestamp="1606834158753" />
     <state x="416" y="312" width="523" height="178" key="ComposerInitDialogKey" timestamp="1606584348729">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -324,6 +339,10 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="464" y="312" width="438" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1366.741@0.27.1366.741" timestamp="1606173521456" />
+    <state x="100" y="127" width="1166" height="541" key="dock-window-1" timestamp="1606863706535">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="100" y="127" width="1166" height="541" key="dock-window-1/0.27.1366.741@0.27.1366.741" timestamp="1606863706535" />
     <state x="557" y="253" width="250" height="278" key="jetbrains.javascript.buildTools.run-task-popup" timestamp="1606601204468">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -332,9 +351,9 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="347" y="174" key="run.anything.popup/0.27.1366.741@0.27.1366.741" timestamp="1605696133634" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1606688899664">
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1606985341956">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1606688899664" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1606985341956" />
   </component>
 </project>

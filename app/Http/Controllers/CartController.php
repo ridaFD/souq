@@ -11,7 +11,12 @@ class CartController extends Controller
 {
     public function index()
     {
-        return view('cart.index');
+        $items = array();
+        foreach (session('cart') as $value) {
+            $items[$value['id']] = $value['quantity'];
+        }
+
+        return view('cart.index', ['items' => $items]);
     }
 
     public function addToCart(Product $product)
@@ -21,12 +26,12 @@ class CartController extends Controller
             'name' => $product->name,
             'description' => $product->description,
             'price' => $product->price,
+            'stock' => $product->stock,
             'image' => $product->image,
             'quantity' => request('quantity')
         ];
 
         if (session()->exists('cart')) {
-
             session()->push('cart', $item);
             $unique = array();
 
@@ -43,10 +48,8 @@ class CartController extends Controller
             }
             session(['total_quantity' => $total_quantity]);
             session(['total_price' => $total_price]);
-
-        } else {
-            session()->push('cart', $item);
         }
+
         return back();
     }
 

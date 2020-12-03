@@ -11,21 +11,34 @@
             </div>
 
             <div class="flex justify-between">
-                <form action="{{ route('product.edit', $product->id) }}" method="post">
-                    @csrf
+                @can('owner')
+                    <form action="{{ route('product.edit', $product->id) }}" method="post">
+                        @csrf
 
-                    <button type="submit" class="p-2 bg-blue-600 hover:bg-blue-500 text-white border border-blue-600">Edit</button>
-                </form>
-                <form action="{{ route('product.destroy', $product->id) }}" method="post">
-                    @csrf
-                    @method('DELETE')
-                <x-delete_button />
-                </form>
-                <form action="{{ route('add.to.cart', $product->id) }}" method="post">
-                    @csrf
-                    <input type="hidden" name="quantity" value="1">
-                    <button type="submit" class="p-2 bg-purple-600 hover:bg-purple-500 text-white border border-purple-600">Add To Cart</button>
-                </form>
+                        <button type="submit" class="p-2 bg-blue-600 hover:bg-blue-500 text-white border border-blue-600">Edit</button>
+                    </form>
+                    <form action="{{ route('product.destroy', $product->id) }}" method="post">
+                        @csrf
+                        @method('DELETE')
+                    <x-delete_button />
+                    </form>
+                @endcan
+
+                <div>
+                    <h1 class="p-2 bg-green-600 hover:bg-green-500 text-white border border-green-600">
+                            {{ $product->stock ==0 ? 'out of stock' : $product->stock . ' pieces left'}}
+                    </h1>
+                </div>
+
+                @can('customer')
+                    @if($product->stock >= 1)
+                        <form action="{{ route('add.to.cart', $product->id) }}" method="post">
+                            @csrf
+                            <input type="hidden" name="quantity" value="1">
+                            <button type="submit" class="p-2 bg-purple-600 hover:bg-purple-500 text-white border border-purple-600">Add To Cart</button>
+                        </form>
+                    @endif
+                @endcan
             </div>
         </div>
     @endforeach
